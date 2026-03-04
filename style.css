@@ -1,0 +1,471 @@
+/* --- style.css */
+:root{
+    --bg-color:#f8f7f3;
+    --text-color:#1a1a1a;
+    --accent-color:#ff4d00;
+}
+
+/* --- Reset CSS --- */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'inter', sans-serif;
+}
+
+/* --- Gaya untuk Body --- */
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* --- Gaya untuk Navbar --- */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* --- Gaya untuk Logo --- */
+.logo{
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+/* --- Gaya untuk Huruf "R" pada Logo --- */
+.logo b{
+    color: var(--accent-color);
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+/* --- Gaya untuk Navigasi Links --- */
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+/* --- Gaya untuk Link Navigasi --- */
+nav ul li a:hover, nav ul li a.active{
+    color: var(--accent-color);
+}
+
+/* --- Gaya untuk Tombol Let's Talk --- */
+.btn-talk{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 12px 25px;
+    border: 1px solid var(--text-color);
+    transition: 0.3s all ease;
+}
+.btn-talk:hover{
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* --- Gaya untuk Hero Section --- */
+.hero-content {
+    flex: 1;
+}
+
+/* --- Gaya untuk Headline di Hero Section --- */
+.headline {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+/* --- Gaya untuk Paragraf di Hero Section --- */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* --- Gaya untuk Tombol Dark --- */
+.btn-dark {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Gaya untuk Tombol Outline --- */
+.btn-outline {
+    background: white;
+    padding: 15px 30px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* --- Gaya untuk Headline di Hero Section --- */
+.headline{
+    font-size: 4.5rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+/* --- Gaya untuk Subheadline di Hero Section --- */
+.subheadline{
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* --- Gaya untuk Tombol di Hero Section --- */
+.hero-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Gaya untuk Ikon Accent --- */
+.strikethrough {
+    text-decoration: line-through var(--text-color) ;
+    color: var(--accent-color);
+}
+
+/* --- Gaya untuk Tombol Dark --- */
+.btn-dark {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+}
+
+/* --- Gaya untuk Tombol Outline --- */
+.btn-outline {
+    background: white;
+    padding: 15px 30px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+/* --- Bagian Hero Section --- */
+.hero {
+    display: flex;
+    justify-content: center space-between; 
+    align-items: center;
+    min-height: 70vh;
+    padding: 0 10%;
+    gap: 50px; 
+    background-color: var(--bg-color);
+}
+
+/* --- Kontainer untuk Hero Text dan Image --- */
+.hero-container {
+    flex: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    width: 90%; 
+    max-width: 1200px;
+}
+
+/* --- Bagian Hero Text dan Image --- */
+.hero-text {
+    flex: 1;
+    padding-right: 5%; /* Memberi jarak antara teks dan gambar */
+}
+
+/* --- Bagian Hero Image --- */
+.hero-image {
+    flex: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Bagian Image Wrapper dan Decorative Shape --- */
+.image-wrapper {
+    position: relative; 
+    width: 380px;
+    height: 380px;
+}
+
+/* --- Bentuk Dekoratif --- */
+.decorative-shape {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    color: var(--accent-color); 
+    background-color: var(--accent-color);
+    clip-path: polygon(
+        10% 2%, 3% 5%, 35% 20%, 65% 10%, 5% 25%, 90% 25%,
+        0% 55%, 65% 55%, 65% 70%, 35% 70%, 35% 55%, 10% 5%
+    ); 
+}
+
+/* --- Bagian Image Circle --- */
+.image-circle {
+    position: absolute;
+    width: 340px; 
+    height: 340px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2; 
+}
+
+/* --- Gaya untuk Gambar di dalam Image Circle --- */
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Gaya untuk Marquee --- */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    color: #fdfdfb;
+    padding: 20px 0;
+    display: flex;
+    white-space: nowrap;
+    transform: rotate(-2deg);
+    margin-left: 0%;
+    margin-top: 40px;
+}
+
+/* --- Gaya untuk Konten Marquee --- */
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+
+.marquee-content span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-right: 50px;
+}
+
+.marquee-content small {
+    color: var(--accent-color);
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+/* --- Animasi untuk Marquee --- */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.about-section {
+    padding: 120px 10%;
+    background-color: var(--bg-color);
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.about-left{
+    flex: 1;
+}
+
+.about-name {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: var(--accent-color);
+}
+
+.about-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.about-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.personal-info {
+    display: flex;
+    align-items: start;
+    flex-direction: space-between;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1.9;
+}
+
+.info-item span {
+    font-size: 1rem;
+    font-weight: 700;
+    flex-direction: space-between;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.info-item p{
+    font-size: 1.5rem;
+    flex-direction: space-between;
+    font-weight: 800;
+    margin: 5;
+    letter-spacing: -3px;
+    white-space: wrap;
+    color: #1a1a1a;
+}
+
+@media (max-width: 992px) {
+
+    .about-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .about-headline {
+        font-size: 2.5rem;
+    }
+
+    .personal-info {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+.skills-section {
+    padding: 100px 10%;
+    background-color: var(--bg-color);
+}
+
+.skills-header {
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.skills-meta{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.skills-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.skills-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    letter-spacing: -0.5px;
+}
+
+.skills-percentage {
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+
+}
+
+@media (max-width: 992px) {
+    .skills-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+

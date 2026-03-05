@@ -4,6 +4,10 @@
     --text-color:#1a1a1a;
     --accent-color:#ff4d00;
 }
+/* --- Gaya untuk Scroll Behavior --- */
+html {
+    scroll-behavior: smooth;
+}
 
 /* --- Reset CSS --- */
 * {
@@ -30,6 +34,10 @@ nav{
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+/* --- Gaya untuk Section dengan Scroll Margin --- */
+section {
+    scroll-margin-top: 200px;
 }
 
 
@@ -297,7 +305,7 @@ nav ul li a:hover, nav ul li a.active{
     gap: 80px;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .about-left{
@@ -468,10 +476,11 @@ nav ul li a:hover, nav ul li a.active{
         gap: 40px;
     }
 }
-
 .projects-section {
     padding: 100px 10%;
     background-color: var(--bg-color);
+    height: auto; /* Pastikan tinggi mengikuti konten */
+    overflow: visible; /* Biarkan konten memanjang ke bawah */
 }
 
 .projects-header {
@@ -481,7 +490,7 @@ nav ul li a:hover, nav ul li a.active{
 }
 
 .projects-meta{
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 15px;
@@ -493,7 +502,7 @@ nav ul li a:hover, nav ul li a.active{
     font-weight: 800;
     line-height: 1.1;
     align-items: center;
-    text-transform: uppercase;
+    text-transform: uppercase;  
 }
 
 .project-list {
@@ -512,7 +521,7 @@ nav ul li a:hover, nav ul li a.active{
 }
 
 .project-info {
-    display: flex
+    display: flex;
     align-items: center;
     gap: 30px;
 }
@@ -555,4 +564,128 @@ nav ul li a:hover, nav ul li a.active{
     color: var(--bg-color);
 }
 
+.contact-section {
+    padding: 100px 10%;
+    background-color: var(--bg-color);
+    text-align: center;
+}
 
+.contact-header {
+    margin-bottom: 60px;
+}
+
+.contact-meta{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: var(--accent-color);
+}
+
+.contact-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+.required {
+    color: var(--accent-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    background-color: #fdfdfb;
+}
+
+.form-submit{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-submit button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    transition: all 0.3s ease;
+}
+.form-submit button:hover {
+    background-color: #ff4d00
+    ;
+    color: var(--bg-color);
+}
+
+/* --- CSS untuk Project-Design --- */
+.project-detail-page {
+    padding: 80px 10%;
+    background-color: var(--bg-color);
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.project-gallery img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item.wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 992px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+    .gallery-item.wide {
+        grid-column: span 1;
+    }
+}

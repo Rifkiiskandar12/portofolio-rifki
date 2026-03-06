@@ -92,6 +92,7 @@ nav ul li a:hover, nav ul li a.active{
     color: var(--bg-color);
 }
 
+
 /* --- Gaya untuk Hero Section --- */
 .hero-content {
     flex: 1;
@@ -115,18 +116,15 @@ nav ul li a:hover, nav ul li a.active{
 /* --- Gaya untuk Tombol Dark --- */
 .btn-dark {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--bg-color);
     padding: 15px 30px;
     border: none;
     cursor: pointer;
 }
 
-/* --- Gaya untuk Tombol Outline --- */
-.btn-outline {
-    background: white;
-    padding: 15px 30px;
-    border: 1px solid #ddd;
-    cursor: pointer;
+.btn-dark:hover{
+    background-color: #ddd;
+    color: #3b3b3b;
 }
 
 /* --- Gaya untuk Headline di Hero Section --- */
@@ -295,7 +293,7 @@ nav ul li a:hover, nav ul li a.active{
 
 
 .about-section {
-    padding: 120px 10%;
+    padding: 40px 10%;
     background-color: var(--bg-color);
 }
 
@@ -378,7 +376,7 @@ nav ul li a:hover, nav ul li a.active{
     color: #1a1a1a;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
 
     .about-container {
         flex-direction: column;
@@ -391,12 +389,12 @@ nav ul li a:hover, nav ul li a.active{
 
     .personal-info {
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 50px;
     }
 }
 
 .skills-section {
-    padding: 100px 10%;
+    padding: 40px 10%;
     background-color: var(--bg-color);
 }
 
@@ -471,14 +469,16 @@ nav ul li a:hover, nav ul li a.active{
 
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .skills-container {
         flex-direction: column;
         gap: 40px;
     }
 }
+
+
 .projects-section {
-    padding: 100px 10%;
+    padding: 40px 10%;
     background-color: var(--bg-color);
     height: auto; /* Pastikan tinggi mengikuti konten */
     overflow: visible; /* Biarkan konten memanjang ke bawah */
@@ -653,44 +653,6 @@ nav ul li a:hover, nav ul li a.active{
     color: var(--bg-color);
 }
 
-/* --- CSS untuk Project-Design --- */
-.project-detail-page {
-    padding: 80px 10%;
-    background-color: var(--bg-color);
-}
-
-.project-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 50px;
-}
-
-.project-gallery img {
-    width: 40%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.project-gallery img:hover {
-    transform: scale(1.05);
-}
-
-.gallery-item.wide {
-    grid-column: span 2;
-}
-
-@media (max-width: 992px) {
-    .project-gallery {
-        grid-template-columns: 1fr;
-    }
-    .gallery-item.wide {
-        grid-column: span 1;
-    }
-}
-
 .footer-section {
     background-color: #000;
     color: #fff;
@@ -701,13 +663,15 @@ nav ul li a:hover, nav ul li a.active{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 60px;
-    border-bottom: 1px solid #333;
+    padding-bottom: 40px;
 }
 
 .footer-link {
     display: flex;
+    list-style: none;
     gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-link a{
@@ -729,21 +693,22 @@ nav ul li a:hover, nav ul li a.active{
     margin-top: 40px;
 }
 
-.copyright {
+.copyright p{
     font-size: 0.85rem;
     opacity: 0.8;
     font-weight: 500;
 }
 
+
 .social-icon-img {
     width: 20px;
     height: 20px;
-    object-fit: contain;
-    display: block;
+    object-fit: fill;
+    display:flex;
     transition: transform 0.3s ease;
 }
 
-.icon-circle:hover .social-icon-img{
+.icon-circle:hover, .social-icon-img{
     transform: scale(1.1);
 }
 
@@ -760,4 +725,125 @@ nav ul li a:hover, nav ul li a.active{
 
 .icon-circle:hover {
     background-color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+        gap:30px;
+        text-align: center;
+    }
+
+    .footer-link {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+}
+
+
+/* --- CSS untuk Project-Design --- */
+.project-detail-page {
+    padding: 80px 10%;
+    background-color: var(--bg-color);
+}
+
+.detail-header {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.detail-meta {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.detail-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.project-gallery {
+    column-count: 3;
+    column-gap: 20px;
+    width: 100%;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item.wide {
+    grid-column: auto;
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    opacity: 0;
+    box-sizing: border-box;
+    transition: opacity 0.4s;
+    text-align: left;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+.gallery-caption h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+} 
+
+.gallery-item:hover .gallery-caption h3,
+.gallery-item:hover {
+    transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+    .project-detail-page {
+        padding: 40px 5%;
+    }
+
+    .project-gallery {
+        column-count: 1;
+    }
+
+    .detail-header {
+        font-size: 2.2rem;
+    }
 }

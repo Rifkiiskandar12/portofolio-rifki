@@ -815,10 +815,6 @@ nav ul li a:hover, nav ul li a.active{
     text-align: left;
 }
 
-.gallery-item:hover .gallery-caption {
-    opacity: 1;
-}
-
 .gallery-caption h3 {
     font-size: 1.2rem;
     font-weight: 800;
@@ -827,11 +823,6 @@ nav ul li a:hover, nav ul li a.active{
     transform: translateY(20px);
     transition: transform 0.4s ease 0.1s;
 } 
-
-.gallery-item:hover .gallery-caption h3,
-.gallery-item:hover {
-    transform: translateY(0);
-}
 
 
 @media (max-width: 768px) {
@@ -846,4 +837,17 @@ nav ul li a:hover, nav ul li a.active{
     .detail-header {
         font-size: 2.2rem;
     }
+}
+
+.btn-home {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-home:hover{
+    background-color: #ddd;
+    color: #3b3b3b;
 }

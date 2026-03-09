@@ -87,10 +87,19 @@ nav ul li a:hover, nav ul li a.active{
     border: 1px solid var(--text-color);
     transition: 0.3s all ease;
 }
-.btn-talk:hover{
-    background-color: var(--text-color);
+.btn-talk a{
+    text-decoration: none;
+    color:var(--text-color);
+}
+
+.btn-talk a:hover {
     color: var(--bg-color);
 }
+
+.btn-talk:hover{
+    background-color: var(--text-color);
+}
+
 
 
 /* --- Gaya untuk Hero Section --- */
@@ -119,7 +128,16 @@ nav ul li a:hover, nav ul li a.active{
     color: var(--bg-color);
     padding: 15px 30px;
     border: none;
-    cursor: pointer;
+    cursor: pointer; 
+}
+
+.btn-dark a{
+    text-decoration:none ;
+    color: var(--bg-color);
+}
+
+.btn-dark a:hover{
+    color: var(--text-color);
 }
 
 .btn-dark:hover{
